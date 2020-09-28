@@ -79,7 +79,4 @@ loves('Mia',X) :- gooddancer(X).
 eat('Jules',X) :- nutritious(X).
 eat('Jules',X) :- tasty(X).
 
-main :-
-  eat(X,Y),
-  write(X),
-  halt.
+% Compila programa: qsave_program(sal, [stand_alone(true), goal(main)])
