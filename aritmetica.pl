@@ -44,6 +44,7 @@ factorial2(N,RES) :-
 accFibo(0,[A,_],A).
 accFibo(1,[_,B],B).
 accFibo(N,[A,B],RES):-
+    N > 1,
     SIG is A+B,
     N1 is N-1,
     accFibo(N1,[B,SIG],RES).
