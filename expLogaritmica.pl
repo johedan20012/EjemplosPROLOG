@@ -17,8 +17,8 @@ Para exponentes mayores a 1,000,000 recomiendo modular la respuesta ya que puede
 de numeros enormes.
 
 Reemplazar las 2 lineas: 
-    -1. Res is Base*Res1   -> Por la linea  -> Res is Mod(Base*Res1,10000009) 
-    -2. Res is Res1*Res1   -> Por la linea  -> Res is mod(Res1*Res1,10000009).
+    -1. Res is Base*Res1   -> Por la linea  -> Res is Mod(Base*Res1,100000009) 
+    -2. Res is Res1*Res1   -> Por la linea  -> Res is mod(Res1*Res1,100000009).
 ------------------------------------FIN NOTA IMPORTANTE-------------------------------
 */
 potencia(Base,1,Base).
