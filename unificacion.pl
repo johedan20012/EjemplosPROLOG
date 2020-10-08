@@ -104,6 +104,23 @@ vertical(line(point(X,_),point(X,_))).  %La variable _ es anonima, se unifica co
 horizontal(line(point(_,Y),point(_,Y))).
 
 
+palabra(determinante,un).
+palabra(determinante,cada).
+palabra(sustantivo,criminal).
+palabra(sustantivo,pollo).
+palabra(verbo,come).
+palabra(verbo,crea).
+
+escribeEs(X) :- write(X), write(' ').
+
+oracion(Palabra1,Palabra2,Palabra3,Palabra4,Palabra5):-
+  palabra(determinante,Palabra1),
+  palabra(sustantivo,Palabra2),
+  palabra(verbo,Palabra3),
+  palabra(determinante,Palabra4),
+  palabra(sustantivo,Palabra5),
+  escribeEs(Palabra1),escribeEs(Palabra2),escribeEs(Palabra3),escribeEs(Palabra4),escribeEs(Palabra5).
+
 %Por ejemplo las sig queries daran los resultados:
 /*
  vertical(line(point(1,2),point(1,8))). 
