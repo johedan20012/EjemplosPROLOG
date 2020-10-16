@@ -42,7 +42,7 @@ Ejemplos:
  ├─────────────┼─────────────┼───────────────┤
  │ mujer(lola) │  mujer(X)   │       Si      │
  ├─────────────┼─────────────┼───────────────┤
- │loves(pepe,X)│loves(X,lola)│       No      │
+ │loves(pepe,X)│loves(X,lola)│       No      │ X => pepe, X => lola
  └─────────────┴─────────────┴───────────────┘
 
 ¿Como hace la unificación PROLOG?
@@ -113,8 +113,9 @@ palabra(verbo,crea).
 
 escribeEs(X) :- write(X), write(' ').
 
-oracion(Palabra1,Palabra2,Palabra3,Palabra4,Palabra5):-
-  palabra(determinante,Palabra1),
+
+oracion(Palabra1,Palabra2,Palabra3,Palabra4,Palabra5):- p1 => un, p2 => criminal, p3=> come, p4 => cada, p5 => pollo
+  palabra(determinante,Palabra1), 
   palabra(sustantivo,Palabra2),
   palabra(verbo,Palabra3),
   palabra(determinante,Palabra4),
