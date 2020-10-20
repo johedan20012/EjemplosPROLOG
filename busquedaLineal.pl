@@ -1,5 +1,15 @@
 %Algoritmo de busqueda lineal de un elemento dentro de una lista, esta hecho en forma recursiva con cola
 %esto es para simular un ciclo iterativo (for)
+/* PSEUDOCODIGO
+    busqueda(X,Lista,ACC):
+        si Lista esta vacia:
+            regresa 0
+        si X == Lista[0]:
+            regresa ACC
+        ACC2 = ACC+1
+        regresa busqueda(X,Lista[1 a len(Lista)-1],ACC2)
+
+*/
 fill([],_,_,0).
 fill([H|T],RMin,RMax,N) :-
     random(RMin,RMax,H),
