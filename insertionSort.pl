@@ -1,4 +1,4 @@
-%Algoritmo recursivo del insertion sort
+%Algoritmo recursivo del insertion sort en PROLOG
 /* Pseudocodigo
     insertar(X, Lista) :
         si Lista esta vacia :
