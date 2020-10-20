@@ -1,4 +1,22 @@
 %Codigo del algoritmo de bubble sort 
+/* PSEUDOCODIGO
+
+    intercambio(Lista):
+        si Lista esta vacia:
+            regresa Lista
+        si len(Lista) es 1:
+            regresa Lista
+        si Lista[1] <= Lista[0]:
+            regresa Lista[1] u intercambio(Lista[0] u Lista[2 a len(Lista)-1])
+        regresa Lista[0] u intercambio(Lista[1 a len(Lista)-1])
+    
+    bubbleSort(Lista,N,ACC) :
+        si N <= 1:
+            regresa ACC
+        ACC1 = intercambio(ACC)
+        regresa bubbleSort(Lista,N-1,ACC1)
+*/
+
 fill([],_,_,0).
 fill([H|T],RMin,RMax,N) :-
     random(RMin,RMax,H),
