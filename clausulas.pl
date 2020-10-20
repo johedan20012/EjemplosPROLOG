@@ -1,4 +1,4 @@
-%Ejejmplos de clausulas de Horn en forma logica y en PROLOG
+%Ejemplos de clausulas de Horn en forma logica y en PROLOG
 /* Ejemplo 1
 
     Forma enunciado:
@@ -36,11 +36,11 @@ hermano(martin,marta).
         A maria solo le gustan las personas que saben bailar. Una persona sabe bailar si toma clases de baile
     Forma logica:
         sabeBailar(X) -> leGusta(maria,X)
-        tomaClases(X) -> sabeBailar
+        tomaClases(X) -> sabeBailar(X)
     Forma PROLOG: 
 */
 leGusta(maria,X) :- tomaClases(X).
-
+tomaClases(marco).
 /* Ejemplo 4
 
     Forma enunciado:
@@ -70,7 +70,7 @@ suma(X,sucesivo(Y),sucesivo(Z)):-
 
 conectados(1,2).
 conectados(3,2).
-conectados(4,3).
+conectados(3,4).
 conectados(1,3).
 
 camino(X,Y) :- conectados(X,Y).
