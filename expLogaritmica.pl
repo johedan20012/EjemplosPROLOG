@@ -47,13 +47,13 @@ potenciaSLOWTail(Base,Exp,Res) :-
 potenciaLog(Base,1,Base).
 potenciaLog(Base,Exp,Res) :-
     1 is mod(Exp,2),
-    NuevoExp is Exp-1,
-    potencia(Base,NuevoExp,Res1),
+    NuevoExp is Exp-1,                 
+    potenciaLog(Base,NuevoExp,Res1),
     Res is mod(Base*Res1,100000009).
 potenciaLog(Base,Exp,Res) :-
-    0 is mod(Exp,2),
+    0 is mod(Exp,2),                    
     NuevoExp is div(Exp,2),
-    potencia(Base,NuevoExp,Res1),
+    potenciaLog(Base,NuevoExp,Res1),
     Res is mod(Res1*Res1,100000009).
 
 % Los siguientes 4 predicados sirven para obtener el resultado de elevar un numero "Base" a la potencia "Exp", usando el algoritmo
@@ -65,14 +65,14 @@ accPotenciaLog(Base ,Exp ,Acc ,Res ) :-
     0 is mod(Exp,2),
     NuevoExp is div(Exp,2),
     NuevoAcc is mod(Acc*Acc,100000009),
-    accPotencia(Base,NuevoExp,NuevoAcc,Res).
+    accPotenciaLog(Base,NuevoExp,NuevoAcc,Res).
 accPotenciaLog(Base ,Exp ,Acc ,Res ) :-
     1 is mod(Exp,2),
     NuevoExp is div((Exp-1),2),
     NuevaBase is mod(Base*Acc,100000009),
     NuevoAcc is mod(Acc*Acc,100000009),
-    accPotencia(NuevaBase,NuevoExp,NuevoAcc,Res).
+    accPotenciaLog(NuevaBase,NuevoExp,NuevoAcc,Res).
 
 potenciaLogTail(Base,Exp,Res) :-
-    accPotencia(1,Exp,Base,Res).
+    accPotenciaLog(1,Exp,Base,Res).
     
