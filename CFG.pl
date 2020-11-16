@@ -1,4 +1,5 @@
-% Código de ejemplo de una CFG(Context Free Grammar)
+% Código de ejemplo de una CFG(Context Free Grammar), cada bloque representa una forma diferente de implementar las CFG en PROLOG
+% pero la ultima es la preferida ya que es la más optima.
 
 /* oracion(Z):- sujeto(X), predicado(Y), append(X,Y,Z).
 
@@ -15,7 +16,8 @@ complemento([obediente]).
 complemento([bonita]). 
  */
 
- /* oracion(X,Z):- sujeto(X,Y), predicado(Y,Z).
+
+/* oracion(X,Z):- sujeto(X,Y), predicado(Y,Z).
 
 sujeto(X,Z):- articulo(X,Y), nombre(Y,Z).
 
@@ -31,7 +33,8 @@ verbo([es|W],W).
 complemento([obediente|W],W).
 complemento([bonita|W],W).   */
 
- /* oracion --> sujeto, predicado.
+
+/* oracion --> sujeto, predicado.
 
 sujeto --> articulo, nombre.
 articulo --> [el].
@@ -45,7 +48,8 @@ verbo --> [es].
 complemento --> [obediente].
 complemento --> [bonita].   */
 
- oracion(o(SU,PRE)) --> sujeto(SU), predicado(PRE).
+
+oracion(o(SU,PRE)) --> sujeto(SU), predicado(PRE).
 
 sujeto(su(AR,NOM)) --> articulo(AR), nombre(NOM).
 articulo(ar(el)) --> [el].
